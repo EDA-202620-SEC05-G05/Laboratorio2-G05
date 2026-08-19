@@ -55,7 +55,7 @@ def print_menu():
     print("Opciones:")
     print("1- Cargar Libros")
     print("2- Cargar Tags")
-    print("3- Cargar Book-Tags!!!...")
+    print("3- Cargar Book-Tags (Tags de Libros)")
     print("0- Salir")
 
 
@@ -93,11 +93,10 @@ def load_books_tags(app):
     :param app: Aplicación de la lógica
     :type app: logic
     """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
     print("Cargando información de Book-Tags...")
-    booktags = load_books_tags(app)
+    booktags = logic.load_books_tags(app, "GoodReads/book_tags-small.csv")
     print("Total de Book-Tags cargados: " + str(booktags))
-    pass
+    return booktags
 
 
 def first_book(app):
@@ -150,8 +149,9 @@ def main():
             print("Total de tags cargados: " + str(tags) + "\n")
 
         elif int(inputs[0]) == 3:
-            # TODO: Mods de Est-3 en el Lab 2
-            pass
+            print("Cargando información de Book-Tags....")
+            booktags = load_books_tags(app)
+            print("Total de Book-Tags cargados: " + str(booktags) + "\n")
 
         elif int(inputs[0]) == 0:
             working = False
