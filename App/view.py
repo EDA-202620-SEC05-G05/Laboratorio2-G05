@@ -55,31 +55,15 @@ def print_menu():
     print("Opciones:")
     print("1- Cargar Libros")
     print("2- Cargar Tags")
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-<<<<<<< HEAD
-<<<<<<< HEAD
     print("3- Cargar los Tags de Libros")
-=======
-    print("3- Cargar Booktags")
->>>>>>> Est-2
-=======
-    print("3- Cargar Tags de Libros")
-    # Agregue la opción 3 para cargar los tags de los libros.
-    # Pueede guiarse de las opciones 1 y 2.
->>>>>>> 8046ec43d66f9bd9d6e16365259782087a23235a
     print("0- Salir")
-
 
 def load_books(app):
     """
-    Función que carga los libros en la aplicación. 
-    Carga los libros desde el archivo books-small.csv y los almacena en la aplicación
-
-    :param app: Aplicación de la lógica
-    :type app: logic
+    Carga los libros
     """
     books = logic.load_books(app,
-                             "GoodReads/books-small.csv")
+    "GoodReads/books.csv")
     return books
 
 
@@ -98,17 +82,12 @@ def load_tags(app):
 
 def load_books_tags(app):
     """
-    Función que carga los tags de los libros en la aplicación.
-    Carga los tags de los libros desde el archivo book_tags-small.csv y los almacena en la aplicación
-
-    :param app: Aplicación de la lógica
-    :type app: logic
+    Cargar los Tags de libros
     """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    book_tags = logic.load_books_tags(app,"GoodReads/book_tags-small.csv")
-
-    return book_tags
-    pass
+    # TODO: Mods de Est-1, Est-2 y Est-3 en Lab 2
+    booktags = logic.load_books_tags(app,
+    "GoodReads/book_tags.csv")
+    return booktags
 
 
 def first_book(app):
