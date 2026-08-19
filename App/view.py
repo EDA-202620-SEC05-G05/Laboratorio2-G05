@@ -56,7 +56,11 @@ def print_menu():
     print("1- Cargar Libros")
     print("2- Cargar Tags")
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+<<<<<<< HEAD
     print("3- Cargar los Tags de Libros")
+=======
+    print("3- Cargar Booktags")
+>>>>>>> Est-2
     print("0- Salir")
 
 
@@ -111,7 +115,11 @@ def last_book(app):
     """
     Devuelve el último libro cargado en el conjunto de libros
     """
-    pass
+    last = logic.last_book(app)
+    return last
+
+    last = last_book(app)
+    print("Último libro cargado:\n" + str(last) + "\n")
 
 
 # Se crea el controlador asociado a la vista
